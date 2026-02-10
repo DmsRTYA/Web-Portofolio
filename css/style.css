@@ -1,0 +1,175 @@
+/* --- Pengaturan Dasar & Font --- */
+:root {
+    --warna-utama: #f0f0f0;
+    --warna-teks: #333;
+    --warna-aksen: #007bff;
+    --warna-putih: #ffffff;
+}
+
+html {
+    /* Membuat scrolling menjadi mulus saat mengklik tautan navigasi */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--warna-utama);
+    color: var(--warna-teks);
+    line-height: 1.6;
+}
+
+/* --- Wadah Utama & Bagian --- */
+.wadah {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bagian {
+    padding: 80px 0;
+    text-align: center;
+    /* Efek transisi untuk kemunculan */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Kelas 'terlihat' ini akan ditambahkan oleh JavaScript saat section muncul di layar */
+.bagian.terlihat {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Navigasi --- */
+header {
+    background-color: var(--warna-putih);
+    padding: 1rem 0;
+    position: fixed; /* Membuat navigasi tetap di atas */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav .wadah {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--warna-aksen);
+    text-decoration: none;
+}
+
+.nav-tautan {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-tautan li {
+    margin-left: 20px;
+}
+
+.nav-tautan a {
+    text-decoration: none;
+    color: var(--warna-teks);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-tautan a:hover,
+.nav-tautan a.aktif { /* Gaya untuk link yang aktif */
+    color: var(--warna-aksen);
+}
+
+/* --- Konten Spesifik per Bagian --- */
+#beranda {
+    padding-top: 150px; /* Memberi ruang di bawah navigasi fixed */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--warna-aksen);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#tentang .konten-flex {
+    display: flex;
+    flex-wrap: wrap; /* Agar bisa turun ke bawah di layar kecil */
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+#tentang .kolom-teks {
+    flex: 2;
+}
+
+#tentang .kolom-gambar {
+    flex: 1;
+    text-align: center;
+}
+
+.gambar-profil {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid var(--warna-putih);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.daftar-keahlian span {
+    background-color: var(--warna-aksen);
+    color: var(--warna-putih);
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#kontak a {
+    color: var(--warna-aksen);
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: var(--warna-utama);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* --- Desain Responsif --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .nav-tautan {
+        display: none; /* Sembunyikan menu di mobile untuk kesederhanaan */
+    }
+
+    #tentang .konten-flex {
+        flex-direction: column; /* Tumpuk kolom secara vertikal */
+    }
+
+    .gambar-profil {
+        margin-top: 20px;
+    }
+}
