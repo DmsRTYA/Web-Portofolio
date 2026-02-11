@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Pribadi</title>
-    <!-- Menghubungkan ke File CSS -->
+    <title>Website Portofolio</title>
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Bagian 1: Navigasi -->
     <header>
         <nav>
             <div class="wadah">
@@ -26,32 +25,32 @@
     </header>
 
     <main>
-        <!-- Bagian 2: Beranda -->
+        
         <section id="beranda" class="bagian">
             <div class="wadah">
                 <h1>Selamat Datang di Website Portofolio Saya</h1>
-                <p>Sebuah tempat untuk menampilkan karya dan keahlian saya.</p>
+                <p>Sebuah tempat untuk menampilkan berbagai karya dan keahlian saya.</p>
             </div>
         </section>
 
-        <!-- Bagian 3: Tentang Saya -->
         <section id="tentang" class="bagian">
-            <div class="wadah konten-flex">
-                <div class="kolom-teks">
-                    <h2>Tentang Saya</h2>
-                    <h3>Dhimas Raditya</h3>
-                    <p>
-                        Saya adalah seorang Tech Enthusiast, dimana saya sangat suka mengulik berbagai hal terutama di bidang teknologi khususnya di bidang Cyber Security.
-                    </p>
-                </div>
-                <div class="kolom-gambar">
-                    <!-- Catatan: Letakkan foto Anda di folder 'assets' dengan nama 'foto.png' -->
-                    <img src="assets/foto.png"Foto Profil Anda class="gambar-profil">
+            <div class="wadah">
+                <div class="tentang-container">
+                    <div class="kolom-teks">
+                        <h2>Tentang Saya</h2>
+                        <h3>Dhimas Raditya</h3>
+                        <p>
+                            Saya adalah seorang Tech Enthusiast, dimana saya sangat suka mengulik berbagai hal terutama di bidang teknologi khususnya di bidang Website Programming dan Cyber Security.
+                        </p>
+                    </div>
+                    <div class="kolom-gambar">
+                        
+                        <img src="assets/foto.png" alt="Foto Profil Anda" class="gambar-profil">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Bagian 4: Keahlian -->
         <section id="keahlian" class="bagian">
             <div class="wadah">
                 <h2>Keahlian Saya</h2>
@@ -60,35 +59,50 @@
                     <span>CSS</span>
                     <span>JavaScript</span>
                     <span>Desain Responsif</span>
+                    <span>CTF</span>
                 </div>
             </div>
         </section>
 
-        <!-- Bagian 5: Projek -->
         <section id="projek" class="bagian">
             <div class="wadah">
                 <h2>Projek Saya</h2>
-                <p>Saat ini belum ada projek yang ditampilkan. Nantikan pembaruan selanjutnya!</p>
+                <div class="projek-container">
+                    <div class="projek-item">
+                        <img src="assets/projek1.png" alt="Projek 1">
+                        <p>Sebuah program kasir sederhana yang dapat melakukan proses pilih barang, pembayaran, cek stok, dan update stok</p>
+                    </div>
+                    <div class="projek-item">
+                        <img src="assets/projek2.png" alt="Projek 2">
+                        <p>Sebuah website pembelajaran Kalkulus sederhana yang berisi berbagai rumus untuk menyelesaikan setiap perhitungan dengan detail dan terperinci</p>
+                    </div>
+                    <div class="projek-item">
+                        <img src="assets/projek3.png" alt="Projek 3">
+                        <p>Sebuah program untuk melakukan klasifikasi dan pemberian ranking untuk beberapa Smartphone yang di input untuk melakukan perbandingan detail dan menentukan mana yang terbaik berdasarkan kriteria pilihan</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Bagian 6: Kontak -->
         <section id="kontak" class="bagian">
             <div class="wadah">
                 <h2>Hubungi Saya</h2>
-                <p>Anda dapat menghubungi saya melalui email: <a href="mailto:emailanda@example.com">123@gmail.com</a></p>
+                <div class="kontak-container">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"></a>
+                    <a href="https://www.instagram.com/dimz.dysinii/" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" alt="Instagram"></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+                    <a href="https://github.com/DmsRTYA" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/material-outlined/48/000000/github.png" alt="Github"></a>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Bagian 7: Footer -->
     <footer>
         <div class="wadah">
             <p>&copy; 2026 Dhimas Raditya. Dibuat dengan sederhana.</p>
         </div>
     </footer>
 
-    <!-- Menghubungkan ke File JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
